@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Sing A Song For U</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/js/cplayer.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/cplayer.min.css">
+    <link href="https://cdn.bootcss.com/material-design-icons/2.2.3/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: url(https://dn-corps-blog-ghost.qbox.me/47174278_p0.jpg);
+            background-size: cover;
+        }
+        body>.main {
+            margin: 5% 0;
+            padding: 3% 15%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px #000;
+            background: rgba(255, 255, 255, 0.62);
+        }
+        body>.main::before {
+    	    display: block;
+    	    content: " ";
+    	    background-size: cover !important;
+    	    background: url(https://dn-corps-blog-ghost.qbox.me/47174278_p0.jpg);
+    	    background-position: center !important;
+    	    width: 100%;
+    	    height: 100%;
+    	    position: absolute;
+    	    left: 0;
+    	    right: 0;
+    	    top: 0;
+    	    bottom: 0;
+    	    filter: blur(10px) brightness(1.2);
+    	    transform: scale(1.03);
+    	    z-index: -9999;
+            will-change:background,transform;
+        }
+        h1 {
+            color: white;
+            text-shadow: 1px 2px 5px #000;
+        }
+        @media screen and (max-width: 700px) {
+			body>.main{
+				padding: 3% 5%;
+			}
+        }
+        .main .content {display: flex;flex-direction: column;line-height: 3;font-size: larger;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Sing A Song For U</h1>
+        <div class="content">
+            <span>珍藏关于你的故事，纪念关于你的相遇.</span>
+            <span></span>
+            <span>芽，生辰快乐.</span>
+            <span></span>
+            <div id="cplayer"></div>
+        </div>
+    </div>
+    <script>
+        var cp = new cPlayer({list:[{
+            name:"火车开往冬天",
+            artist:"朴树",
+            image:"/image/wq2000.jpg",
+            url:"/music/hc.mp3"
+        }]});
+    </script>
+</body>
+</html>
